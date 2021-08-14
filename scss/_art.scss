@@ -1,0 +1,140 @@
+
+.art {
+    position: relative;
+    text-align: center;
+    background: url('../images/bg-pattern-circles.svg'), $gradientBlue;
+    background-repeat: no-repeat;
+    background-size: 578px,100%;
+    background-position: 50% -230px, 0% 0%;
+    padding-top: 215px;
+    padding-bottom: 120px;
+    border-radius: 0 90px;
+    font-family: 'Overpass', sans-serif;
+    color: $white;
+
+
+    @include breakpoint-fixed-up(500px) {
+        background-size: 650px,100%;
+        background-position: 50% -284px, 0% 0%;
+    }
+    @include breakpoint-up(large){
+        padding: 0;
+        position: initial;    
+        background: url('../images/bg-pattern-circles.svg'), $gradientBlueLtR;
+        background-repeat: no-repeat;
+        background-size: 1000px,100%;
+        background-position: -200px -520px, 0% 0%;
+    }
+
+    @include breakpoint-fixed-up(1300px){
+        padding: 0;
+        position: initial;    
+        background-size: 1000px,100%;
+        background-position: -200px -520px, 0% 0%;
+    }
+
+    &__container { 
+        @include breakpoint-up(large){
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            padding-top: 80px;
+            padding-bottom: 60px;
+        }   
+        @include breakpoint-fixed-up(1300px){
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            padding-top: 120px;
+            padding-bottom: 100px;
+        }
+
+        @include breakpoint-up(xlarge){
+            padding-right: 0;
+        }
+    }
+
+
+
+    &__img {
+        position: absolute;
+        width: 375px;
+        top: -197px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include breakpoint-fixed-up(500px){
+            width: 400px;
+        }
+
+        @include breakpoint-up(large){
+            width: 490px;
+            top: -50px;
+            left: -50px;
+            transform: none;
+        }
+
+        @include breakpoint-fixed-up(1200px){
+            left: -40px;
+        }
+
+        @include breakpoint-fixed-up(1300px){
+            width: 540px;
+            top: -62px;
+            left: -40px;
+            transform: none;
+        }
+
+        @include breakpoint-up(xlarge){
+            left: -30px;
+        }
+    }
+
+    &__text {
+
+        @include breakpoint-up (large){
+            width: 350px;
+            text-align: left;
+        }
+
+        @include breakpoint-fixed-up(1200px) {
+            width: 470px;
+        }
+
+        @include breakpoint-fixed-up (1300px){
+            width: 540px;
+            text-align: left;
+        }
+    }
+
+    &__title {
+        font-size: 40px;
+        line-height: 50px;
+        margin-bottom: 20px;
+
+        @include breakpoint-up(large){
+            font-size: 35px;
+            line-height: 45px;
+        }
+        @include breakpoint-fixed-up(1300px){
+            font-size: 40px;
+            line-height: 50px;
+        }
+    }
+
+    &__description {
+        font-size: 17px;
+        line-height: 27px;
+
+        @include breakpoint-up(large){
+            font-size: 16px;
+            line-height: 26px;
+        }
+        @include breakpoint-fixed-up(1300px){
+            font-size: 17px;
+            line-height: 27px;
+        }
+    }
+
+
+}

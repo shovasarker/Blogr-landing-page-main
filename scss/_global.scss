@@ -1,0 +1,142 @@
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    width: 100vw;
+    height: 100%;
+    color: $veryDarkGrayishBlue;
+    background-color: $bodyBg;
+    overflow-x: hidden;
+
+    // @include breakpoint-up(large){
+    //     position: relative;
+    // }
+}
+
+
+a {
+    text-decoration: none;
+}
+
+h3 {
+    font-size: 26px;
+    line-height: 30px;
+}
+
+p {
+    font-size: 17px;
+    line-height: 27px;
+}
+
+.container {
+    @include breakpoint-up(large){
+        width: 77.8%;
+        margin: 0 auto;
+    }
+}
+
+.p {
+
+
+    &-5 {
+        padding: 55px 24px;
+
+        @include breakpoint-fixed-up(500px) {
+            padding: 55px 8%;
+        }
+
+        @include breakpoint-up(large){
+            padding: 60px 0;
+        }
+
+        @include breakpoint-up(xlarge){
+            padding: 60px 0;
+        }
+    }
+
+    &x-24{
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    &y-55 {
+        padding-top: 55px;
+        padding-bottom: 55px;
+
+    }
+
+    &t-55 {
+        padding-top: 55px;
+    }
+    &b-55 {
+        padding-bottom: 55px;
+    }
+
+    &l-24 {
+        padding-left: 24px;
+    }
+
+    &r-24 {
+        padding-right: 24px;
+    }
+}
+
+
+.hide-for-mobile {
+    @include breakpoint-down(medium){
+        display: none;
+    }
+}
+
+.hide-for-desktop {
+    @include breakpoint-up(large){
+        display: none;
+    }
+}
+
+.cta-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px !important;
+    height: 48px !important;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 700;
+    font-family: 'Ubuntu', sans-serif;
+    border: none;
+    border-radius: 9999px;
+    background-color: blanchedalmond;
+    transition: all 0.3s ease-in-out;
+}
+
+.cta-mobile {
+    color: $white;
+    background: $gradientRedLtR;
+}
+
+.cta-desktop {
+    color: $lightRed;
+    background-color: $white;
+
+    &:hover {
+        color: $white;
+        background-color: $veryLightRed;
+    }
+}
+
+.cta-trans {
+    background-color: transparent;
+    color: $white;
+    border: 1px solid $white;
+
+    &:hover {
+        background-color: $white;
+        color: $lightRed;
+    }
+}
